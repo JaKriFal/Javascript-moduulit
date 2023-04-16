@@ -13,3 +13,14 @@ const students = [
     id: '5423679',
   },
 ];
+
+const select = document.querySelector('#target');
+
+for(let i=0;i<students.length;i++) {
+  let u = document.createElement('option')
+  u.value = students[i].id
+  let t = document.createTextNode(students[i].name)
+  u.appendChild(t)
+  select.appendChild(u)
+
+}

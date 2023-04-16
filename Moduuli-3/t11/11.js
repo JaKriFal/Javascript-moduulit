@@ -125,6 +125,36 @@ for(let j = 0; j < picArray.length; j++) { //loop through all array elements
   a.appendChild(f)
   a.appendChild(p)
 
+
+
   pics.appendChild(a)
+
 }
+
+
+
+const modal = document.querySelector('dialog')
+const cards = document.querySelectorAll('.card')
+
+const x = modal.querySelector('span')
+
+x.addEventListener('click', function() {
+  modal.close()
+})
+
+cards.forEach(function(item, index) {
+  item.addEventListener('click', function() {
+
+    let img = modal.querySelector('img')
+    img.src = picArray[index].image.large
+    img.alt = picArray[index].title
+    modal.showModal()
+  })
+})
+
+
+
+
+
+
 
