@@ -132,12 +132,12 @@ for(let j = 0; j < picArray.length; j++) { //loop through all array elements
 }
 
 
-
+//uutta koodia modaaliominaisuuden luomiseen
 const modal = document.querySelector('dialog')
 const cards = document.querySelectorAll('.card')
-
 const x = modal.querySelector('span')
 
+//spanin klikkaaminen sulkee aina modaalin
 x.addEventListener('click', function() {
   modal.close()
 })
