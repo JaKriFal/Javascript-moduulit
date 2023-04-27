@@ -24,7 +24,8 @@ form.addEventListener('submit', async function(evt) {
             let showsum = document.createElement('div')
             showsum.innerHTML = jsonData[j].show.summary
             let showimg = document.createElement('img')
-            showimg.src = jsonData[j].show.image?.medium
+
+            showimg.src = jsonData[j].show.image ? jsonData[j].show.image.medium : "https://via.placeholder.com/210x295?text=Not%20Found"
             showimg.alt = jsonData[j].show.name
             let showlink = document.createElement('a')
             showlink.href = jsonData[j].show.url
@@ -50,7 +51,3 @@ form.addEventListener('submit', async function(evt) {
 
 
 })
-
-
-
-

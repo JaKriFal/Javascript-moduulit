@@ -7,15 +7,15 @@ let arg = form.querySelector('input[id = "query"]')
 
 form.addEventListener('submit', function(evt) {
     evt.preventDefault()
-    TVQuery(arg.value)
+    TVQuery()
 
 
 })
 
-async function TVQuery(query) {
+async function TVQuery() {
     console.log("starting download")
     try {
-        const url = "https://api.tvmaze.com/search/shows?q=" + query
+        const url = `https://api.tvmaze.com/search/shows?q=${arg.value}`
         const response = await fetch(url);    // starting data download, fetch returns a promise which contains an object of type 'response'
         const jsonData = await response.json();          // retrieving the data retrieved from the response object using the json() function
         console.log(jsonData);
