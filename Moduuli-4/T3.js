@@ -21,7 +21,7 @@ async function TVQuery(query) {
         console.log(jsonData);
 
     } catch {
-    console.log("an error has occurred")
+        console.log("an error has occurred")
     }
 
 }
